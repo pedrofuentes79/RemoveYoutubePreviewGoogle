@@ -1,6 +1,7 @@
 # Remove Youtube Preview from Google Search
 This projects aims to remove the youtube preview from google search results.
-This is still unfinished, so it does not currently work.
+This project works, though it is not perfect. It is a work in progress.
+Currently, the extensions removes all visibility from the video but still allows the audio to play. It also doesn't allow the user to go back to the normal search screen unless they refresh the page. I am working on a fix for this.
 Any suggestions are welcome.
 
 ## How to use
