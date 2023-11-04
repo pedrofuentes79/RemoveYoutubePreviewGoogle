@@ -1,6 +1,14 @@
 function hideVideoElements(elements) {
   for (let i = 0; i < elements.length; i++) {
-    elements[i].style.display = "none";
+    const element = elements[i];
+    const elementClass = element.className;
+    const elementStyle = element.style;
+
+    // Hide divs that have jscontroller="Dq2Yjb" as attribute
+    if (element.getAttribute("jscontroller") === "Dq2Yjb") {
+      elementStyle.visibility = "hidden";
+      console.log("jscontroller");
+    }
   }
 }
 
@@ -28,5 +36,5 @@ function observeDOM() {
   observer.observe(target, config);
 }
 
-hideVideoElements(document.querySelectorAll(".video-stream, .html5-main-video"));
+hideVideoElements(document.querySelectorAll(".html5-main-video"));
 observeDOM();
